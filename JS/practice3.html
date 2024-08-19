@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>	
+<script>
+window.onload = function(){
+    document.getElementById('btn').addEventListener('click',function(){
+        let num=document.getElementById('inputN').value;
+        let error=document.getElementById('error');
+        //let num=num(n);
+        if(isNaN(num)|| num<3 || num>25){
+            error.style.visibility='visible';
+        }
+
+    })
+   
+};
+</script>
+<body>
+    想要劃出幾層的樹呢?(限定:3~25)<br>
+    <form id="form">
+        <input id="inputN" type="text" name="n"></input>
+        <button id="btn" type="button">送出</button><br>
+        <span id=error style="color: red; visibility: hidden;">請輸入正確的數字</span>
+    </form>
+</body>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<script>  
+    window.onload = function(){
+        document.getElementById('otherCheckbox').addEventListener('change', function() {
+            let otherInput = document.getElementById('otherInput');
+            if (this.checked) {
+                otherInput.disabled=false;
+            } else {
+                otherInput.value="";
+                otherInput.disabled=true;
+                
+            }
+        })
+
+        document.getElementById('sayhibtn').addEventListener('click',function(){
+            this.setAttribute('type','button');
+            const name=document.getElementById('name');
+            let from=document.getElementById('from').value;
+            let works=document.querySelectorAll('input[name=yesno]');
+            let workexp='';
+            let languages=document.querySelectorAll('input[type=checkbox]');
+            let lang=[];
+            for(let work of works){
+                if(!work.checked){
+                    break;
+                }
+                workexp=work.value;
+            }
+            for(let language of languages){
+                if(!language.checked){
+                    continue;
+                }
+                if(language.value==='其他'){
+                    language.value=document.getElementById('otherInput').value;
+                }
+                lang.push(language.value);
+            }
+            if(name.value===""){
+                alert("請輸入英文名");
+            }
+            else{
+                let con=confirm('英文名:'+ name.value + '\n哪裡人:'+from+'\n正式工作經驗:'+workexp+'\n語言:'+lang
+                );
+                if(con){
+                    alert('Hi~'+name.value);
+                }
+
+            }
+        })
+    };
+    
+</script>  
+<body>
+<img src="https://thumbor.4gamers.com.tw/UXhV2H6sPtPNYAQZcIzLHTe3Eds=/adaptive-fit-in/1200x1200/filters:no_upscale():extract_cover():format(jpeg):quality(85)/https%3A%2F%2Fugc-media.4gamers.com.tw%2Fpuku-prod-zh%2Fanonymous-story%2Faed59472-531b-4fcb-8cec-749195eb9a36.jpg" 
+width="240" height="270" >
+<form method="get">
+    英文名:<input id="name" type="text" name="NAME" >
+<div>
+哪裡人:
+<select id="from">
+    <option value="">請選擇</option>
+    <option value="台北市">台北市</option>
+    <option value="台中市">台中市</option>
+    <option value="高雄市">高雄市</option>
+</select>        
+</div>
+<div>
+正式工作經驗:
+<label><input type="radio" name="yesno" value="有"/>有</label>
+<label><input type="radio" name="yesno" value="沒有"/>沒有</label>
+</div>
+<div>
+語言:
+<label><input type="checkbox" value="國語"/>國語</label>   
+<label><input type="checkbox" value="台語"/>台語</label> 
+<label><input id="otherCheckbox" type="checkbox" value="其他"/>其他 </label>
+<input type="text" id="otherInput" disabled>   
+</div>
+<table border="1">
+    <tr>
+        <td colspan="10">
+            如果可以出國旅遊的話,想去~
+        </td>    
+    </tr>
+    <tr>
+        <td>
+            1
+        </td>
+        <td colspan="7">
+            <input type="text" >
+        </td>
+    </tr>
+    <tr>
+        <td>
+            2
+        </td>
+        <td colspan="7">
+            <input type="text" >
+        </td>
+    </tr>
+    <tr>
+        <td>
+            3
+        </td>
+        <td colspan="7">
+            <input type="text" >
+        </td>
+    </tr>
+</table>
+<button id="sayhibtn" type="submit">Say HI~</button>
+</form>

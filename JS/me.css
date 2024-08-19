@@ -1,0 +1,28 @@
+#photo{ /* 固定圖片大小 */
+    width: 240px;
+    height: 270px;
+}
+
+div { /* 黃底 */
+    width: 15%;
+    background-color:gold;
+}
+
+#A { background-color:rgb(242, 198, 214);
+    display: block;
+    margin:auto;
+}
+
+.first { /* 粉紅底 */
+    background-color:rgb(255, 127, 127);
+}
+
+.center { /* 元件置中 */
+    text-align: center;
+}
+
+.centerblock{
+    display: block;
+    margin:auto;
+}
+

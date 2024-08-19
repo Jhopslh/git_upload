@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="me.css">
+    <script text="JavaScript";>
+    /*var key1='test';
+    var obj={'key':key1,key1:'key'};
+    for(var temp in obj){
+        console.log(temp+':'+obj[temp]);
+    }
+    var key='test';
+    var obj={'key':key,key:'key'};
+    for(var tempKey in obj){
+        console.log(tempKey+':'+obj[tempKey]);
+    }
+
+    var array1=[];
+    var array2=array1;
+    array2.push('123');
+    console.log(array1.length);
+
+    var obj={name:'幸運兒',age:20,lottory:[1,5,29,41,37,15]};
+
+    var origin={王大明:89,張小美:97,李鐵柱:18,謝小天:22};
+    for(var key in origin){
+        var adj=origin[key]+5;
+        if(adj>100){
+            adj=100;
+        }
+        console.log(key+':'+adj);
+    }
+
+    var func=function(str){
+        console.log('func='+str);
+    }
+    function func(str,str2){
+        console.log('func override='+str);
+    }    
+    func('1');
+    
+    var arr=[6,5,'草莓大福',false,undefined,'抹茶拿鐵',[],function(){},{}];
+    for(var type of arr){
+        var aws=typeof type;
+        if(aws=="object"){
+            aws=type instanceof Array? 'Array':'Object';
+        }
+        console.log(aws);
+    }
+
+    var a=10;
+    if(a<100){
+        var b=20;
+    }
+    console.log(b);
+    var func= function(){
+        var str1='funcString';
+        var func2= function(){
+            console.log('str1='+str1);
+        };
+        func2();
+    };
+    func();
+    str='string';
+    var func=function(){
+        var str='funcString';
+        console.log('func get window.str='+window.str);
+        console.log('func get str ='+str);
+    };
+
+    console.log('before='+str);
+    func();
+    console.log('after='+str);*/
+    const ArrayList= function(){
+        const list=[];
+        return{
+            'add':function(datas){
+                list.push(datas);
+            },
+            'get':function(ind){
+                return list[ind];
+            }
+        };
+    };
+
+    const datas = ArrayList();
+    datas.add('AAA');
+    console.log(datas.get(0));
+
+
+
+  
+</script>
+</head> 
+<body>
+<form method="post" action="hello.html">
+<div id="A">
+ <button type="submit" class="centerblock"> <img src="https://thumbor.4gamers.com.tw/UXhV2H6sPtPNYAQZcIzLHTe3Eds=/adaptive-fit-in/1200x1200/filters:no_upscale():extract_cover():format(jpeg):quality(85)/https%3A%2F%2Fugc-media.4gamers.com.tw%2Fpuku-prod-zh%2Fanonymous-story%2Faed59472-531b-4fcb-8cec-749195eb9a36.jpg"
+    id="photo" class="centerblock" title="hello" ></button>
+<input type="text" name="名字資訊" class="center centerblock">
+</form>
+</div>
+</body> 
